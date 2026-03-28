@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "\"amiai\""
+version = "0.1.0"
+description = "\"a system to understand freshman students' academic motivation in artificial intelligence\""
+authors = ["msiqueiras <devef.msiqueira@gmail.com>", "hellsdeur <mtshelder@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11, <3.15"
+pandas = "^3.0.1"
+scikit-learn = "^1.8.0"
+matplotlib = "^3.10.8"
+nltk = "^3.9.4"
+spacy = "^3.8.13"
+unidecode = "^1.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

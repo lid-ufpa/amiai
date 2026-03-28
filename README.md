@@ -1,2 +1,2 @@
-# amiai
-A system to understand motivation of freshman students in AI.
+# AMIAI
+AMIAI is a system to understand freshman students' academic motivation in artificial intelligence (Am I AI?)
