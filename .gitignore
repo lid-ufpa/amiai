@@ -1,3 +1,2 @@
-*.ipynb
-notebook/
 *.venv
+*__pycache__
