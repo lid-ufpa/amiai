@@ -1,10 +1,13 @@
 import os
 import spacy
 import unidecode
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem.rslp import RSLPStemmer
 import numpy as np
 
+nltk.download('stopwords', quiet=True)
+nltk.download('rslp', quiet=True)
 
 nlp = spacy.load('pt_core_news_md')
 stopwords = list(stopwords.words('portuguese'))
