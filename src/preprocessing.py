@@ -1,13 +1,21 @@
+import os
 import spacy
 import unidecode
 from nltk.corpus import stopwords
-from nltk.stem.rslp import RSLPStemmer  
+from nltk.stem.rslp import RSLPStemmer
 import numpy as np
 
 
 nlp = spacy.load('pt_core_news_md')
 stopwords = list(stopwords.words('portuguese'))
 PT_STOPWORDS = [unidecode.unidecode(word) for word in stopwords]
+
+_custom_stopwords_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'stopwords.txt')
+if os.path.exists(_custom_stopwords_path):
+    with open(_custom_stopwords_path, 'r', encoding='utf-8') as _f:
+        _custom = [unidecode.unidecode(line.strip()) for line in _f if line.strip()]
+    PT_STOPWORDS = list(set(PT_STOPWORDS + _custom))
+
 STEMMER = RSLPStemmer()
 
 def tokenize(text):
