@@ -35,13 +35,16 @@ def stemming(tokens):
     return stems
 
 
-def lemmatization(text):
+def lemmatization(tokens):
+
+    text = ' '.join(tokens)
 
     lemmas = []
     doc = nlp(text)
 
     for txt in doc:
-        lemmas.append(txt.lemma_)
+        word = unidecode.unidecode(txt.lemma_)
+        lemmas.append(word)
 
     return lemmas
 
