@@ -1,0 +1,10 @@
+pandas>=2.2,<3.1
+scikit-learn>=1.8.0
+matplotlib>=3.10.8
+nltk>=3.9.4
+spacy>=3.8.13
+unidecode>=1.4.0
+gensim>=4.4.0
+numpy>=2.4.3
+wordcloud>=1.9.6
+streamlit>=1.45.1
